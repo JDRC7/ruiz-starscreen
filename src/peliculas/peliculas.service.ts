@@ -21,10 +21,10 @@ export class PeliculasService {
     if (!genero) throw new NotFoundException('Género no encontrado');
 
     const pelicula = this.peliculaRepository.create({
-      nombre:      createPeliculaDto.nombre,
-      cedula:      createPeliculaDto.cedula,
-      dias_atraso: createPeliculaDto.dias_atraso ?? 0,
-      activo:      createPeliculaDto.activo ?? true,
+      titulo:       createPeliculaDto.Titulo,
+      descripcion:   createPeliculaDto.descripcion ?? '',
+      fecha_lanzamiento: new Date(),
+      activo:       createPeliculaDto.activo ?? true,
       genero:       genero,
     });
     return this.peliculaRepository.save(pelicula);

@@ -1,21 +1,29 @@
-import { IsString, IsUUID, IsInt, IsBoolean, IsOptional, Min } from 'class-validator';
+import { IsString, IsUUID, IsInt, IsBoolean, IsOptional, Min, IsNumber } from 'class-validator';
 
 export class CreatePeliculaDto {
   @IsUUID()
   generoId?: string;
 
   @IsString()
-  nombre?: string;
+  Titulo?: string;
 
   @IsString()
-  cedula?: string;
+  codigo?: string;
 
   @IsOptional()
   @IsInt()
   @Min(0)
-  dias_atraso?: number;
+  duracion?: number;
 
   @IsOptional()
   @IsBoolean()
   activo?: boolean;
+
+  @IsOptional()
+  @IsString()
+  descripcion?: string;
+
+  @IsOptional()
+  @IsNumber()
+  precio_entrada?: number;
 }

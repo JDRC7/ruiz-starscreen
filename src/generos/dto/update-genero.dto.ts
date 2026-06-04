@@ -6,10 +6,6 @@ export class UpdateGeneroDto {
   nombre?: string;
 
   @IsOptional()
-  @IsNumber()
-  precio?: number;
-
-  @IsOptional()
-  @IsBoolean()
-  activo?: boolean;
+  @IsString()
+  descripcion?: string;
 }

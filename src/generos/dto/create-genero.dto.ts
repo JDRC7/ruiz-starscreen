@@ -4,10 +4,6 @@ export class CreateGeneroDto {
   @IsString()
   nombre?: string;
 
-  @IsNumber()
-  precio?: number;
-
-  @IsOptional()
-  @IsBoolean()
-  activo?: boolean;
+  @IsString()
+  descripcion?: string;
 }
