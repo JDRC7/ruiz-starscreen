@@ -1,8 +1,8 @@
-nest generate module generos
+nest generate module generos -- planes
 nest generate controller generos
 nest generate service generos
 
-nest generate module peliculas
+nest generate module peliculas -- socios
 nest generate controller peliculas
 nest generate service peliculas
 
